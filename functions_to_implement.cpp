@@ -1,5 +1,8 @@
 /* String functions section */
 
+#include <iostream>
+#include <vector>
+
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
 
@@ -64,6 +67,26 @@ int Sign(int num){
 	{
 		return 1
 	}
+int Factorial(int n){
+    if (n <= 1){
+        return 1;
+    }
+    else{
+        return n*(Factorial (n-1));
+    }
+}
+
+// returns -1 if the number is negative and 1 if positive
+int Sign(int num){
+    if(num < 0){
+        return -1;
+    }
+    else if (num == 0){
+        return 0;
+    }
+    else{
+        return 1;
+    }
 }
 
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
@@ -105,14 +128,15 @@ std::vector<double> Multiples(double n, double m);
 double Sign(double num);
 
 
+
 // adds n to each element of the vector
+std::vector<int> AddN(std::vector<int> v, int n);
 std::vector<int> AddN(std::vector<int> v, int n){
 	for (int i = 0; i < v.size(); i++)
 	{
 		v[i]+= n;
 	}
 }
-
 // adds n to each element of the vector
 std::vector<double> AddN(std::vector<double>, double n);
 
@@ -125,3 +149,12 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
+
+
+int main (){
+
+    std::cout << Factorial(4) << std::endl;
+    std::cout << Sign(1) << std::endl;
+
+    return 0;
+}
