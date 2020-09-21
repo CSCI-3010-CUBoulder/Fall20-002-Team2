@@ -1,7 +1,7 @@
-/* String functions section */
-
 #include <iostream>
 #include <vector>
+/* String functions section */
+
 
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
@@ -58,6 +58,7 @@ int NthFibonacci(int n);
 int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
+
 int Sign(int num){
 	if (num < 0)
 	{
@@ -103,6 +104,14 @@ std::vector<bool> LessMask(std::vector<int> nums, int less_than);
 
 // Sums all numbers in a vector and returns the resulting value
 double Sum(std::vector<double> nums);
+double Sum(std::vector<double> nums){
+	double total = 0;
+	for (int i = 0; i < nums.size(); i++)
+	{
+		total+=nums[i];
+	}
+	return total;
+}
 
 // Multiplies all numbers in a vector together and returns the resulting value
 double Product(std::vector<double> nums);
@@ -119,7 +128,15 @@ std::vector<double> Multiples(double n, double m);
 
 // returns -1 if the number is negative and 1 if positive
 double Sign(double num);
-
+double Sign(double num){
+	if (num>0)
+	{
+		return 1.0;
+	}
+	else {
+		return -1.0;
+	}
+}
 
 
 // adds n to each element of the vector
@@ -129,7 +146,7 @@ std::vector<int> AddN(std::vector<int> v, int n){
 	{
 		v[i]+= n;
 	}
-    return v;
+	return v;
 }
 // adds n to each element of the vector
 std::vector<double> AddN(std::vector<double>, double n);
