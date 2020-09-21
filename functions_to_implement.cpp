@@ -132,10 +132,10 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 std::vector<double> SubtractN(std::vector<double>, double n);
 
 
-int main (){
+// int main (){
 
-    std::cout << Factorial(4) << std::endl;
-    std::cout << Sign(1) << std::endl;
+//     std::cout << Factorial(4) << std::endl;
+//     std::cout << Sign(1) << std::endl;
 
-    return 0;
-}
+//     return 0;
+// }
