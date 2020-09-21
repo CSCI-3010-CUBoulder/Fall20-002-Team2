@@ -1,3 +1,5 @@
+#include <iostream>
+#include <vector>
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -105,10 +107,10 @@ double Sign(double num);
 double Sign(double num){
 	if (num>0)
 	{
-		return num;
+		return 1.0;
 	}
 	else {
-		return -num;
+		return -1.0;
 	}
 }
 
@@ -119,6 +121,7 @@ std::vector<int> AddN(std::vector<int> v, int n){
 	{
 		v[i]+= n;
 	}
+	return v;
 }
 
 // adds n to each element of the vector
