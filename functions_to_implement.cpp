@@ -126,6 +126,7 @@ std::vector<int> AddN(std::vector<int> v, int n){
 	{
 		v[i]+= n;
 	}
+    return v;
 }
 // adds n to each element of the vector
 std::vector<double> AddN(std::vector<double>, double n);
