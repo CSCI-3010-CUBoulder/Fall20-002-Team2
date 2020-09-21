@@ -2,8 +2,6 @@
 #include <vector>
 /* String functions section */
 
-#include <iostream>
-#include <vector>
 
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
@@ -60,9 +58,7 @@ int NthFibonacci(int n);
 int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
-<<<<<<< HEAD
-int Sign(int num);
-=======
+
 int Sign(int num){
 	if (num < 0)
 	{
@@ -84,7 +80,6 @@ int Factorial(int n){
         return n*(Factorial (n-1));
     }
 }
->>>>>>> fb896437fcba5d690c965a0705d6ed46652af7cb
 
 // returns -1 if the number is negative and 1 if positive
 
@@ -145,21 +140,13 @@ double Sign(double num){
 
 
 // adds n to each element of the vector
-<<<<<<< HEAD
-std::vector<int> AddN(std::vector<int>, int n);
-=======
 std::vector<int> AddN(std::vector<int> v, int n);
->>>>>>> fb896437fcba5d690c965a0705d6ed46652af7cb
 std::vector<int> AddN(std::vector<int> v, int n){
 	for (int i = 0; i < v.size(); i++)
 	{
 		v[i]+= n;
 	}
-<<<<<<< HEAD
 	return v;
-=======
-    return v;
->>>>>>> fb896437fcba5d690c965a0705d6ed46652af7cb
 }
 // adds n to each element of the vector
 std::vector<double> AddN(std::vector<double>, double n);
