@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <vector>
 /* String functions section */
@@ -39,10 +40,18 @@ int Sum(std::vector<int> nums);
 int Product(std::vector<int> nums);
 
 // Adds an integer n to each element of a given vector
-std::vector<int> VectorPlusN(std::vector<int> v, int n);
+std::vector<int> VectorPlusN(std::vector<int> v, int n){
+    for(int i=0; i<v.size(); i++){
+        v[i] = v[i]+n;
+    }
+}
 
 // Multiples an integer n with each element of a given vector
-std::vector<int> VectorTimesN(std::vector<int> v, int n);
+std::vector<int> VectorTimesN(std::vector<int> v, int n){
+    for(int i=0; i<v.size(); i++){
+        v[i] = v[i]*n;
+    }
+}
 
 // takes in two integers and returns a vector of size n with
 // values n*1, n*2, n*3... up to n*m
@@ -58,7 +67,6 @@ int NthFibonacci(int n);
 int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
-
 int Sign(int num){
 	if (num < 0)
 	{
@@ -81,8 +89,6 @@ int Factorial(int n){
     }
 }
 
-// returns -1 if the number is negative and 1 if positive
-
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
 // If the double is in b, but not in a, nothing happens.
 std::vector<double> MatchVectors(std::vector<double> a, std::vector<double> b);
@@ -103,7 +109,6 @@ std::vector<bool> GreaterMask(std::vector<int> nums, int greater_than);
 std::vector<bool> LessMask(std::vector<int> nums, int less_than);
 
 // Sums all numbers in a vector and returns the resulting value
-double Sum(std::vector<double> nums);
 double Sum(std::vector<double> nums){
 	double total = 0;
 	for (int i = 0; i < nums.size(); i++)
@@ -127,7 +132,6 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 std::vector<double> Multiples(double n, double m);
 
 // returns -1 if the number is negative and 1 if positive
-double Sign(double num);
 double Sign(double num){
 	if (num>0)
 	{
@@ -148,12 +152,6 @@ std::vector<int> AddN(std::vector<int> v, int n){
 	}
 	return v;
 }
-// adds n to each element of the vector
-std::vector<double> AddN(std::vector<double>, double n);
-
-// adds n to each element of the vector
-std::vector<std::string> AddN(std::vector<std::string>, std::string n);
-
 
 // subtracts n to each element of the vector
 std::vector<int> SubtractN(std::vector<int>, int n);
